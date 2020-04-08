@@ -7,8 +7,8 @@
       "projectType": "application",
       "schematics": {},
       "root": "",
-      "sourceRoot": "src",
-      "prefix": "app",
+      "sourceRoot": "twi",
+      "prefix": "twi",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
