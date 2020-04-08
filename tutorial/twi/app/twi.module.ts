@@ -1,16 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './twi.component';
+import { TwiComponent } from './twi.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    TwiComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [TwiComponent]
 })
-export class AppModule { }
+export class TwiModule { }

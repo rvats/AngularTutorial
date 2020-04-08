@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'twi-root',
   templateUrl: './twi.component.html'
 })
-export class AppComponent {
+export class TwiComponent {
   title = 'tutorial';
 }

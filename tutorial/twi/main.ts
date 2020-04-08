@@ -1,12 +1,12 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { AppModule } from './app/twi.module';
+import { TwiModule } from './app/twi.module';
 import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+platformBrowserDynamic().bootstrapModule(TwiModule)
   .catch(err => console.error(err));
