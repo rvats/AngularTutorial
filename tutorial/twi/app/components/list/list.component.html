@@ -1,1 +1,25 @@
-<p>list works!</p>
+<div class="appointment-list item-list mb-3">
+  <div class="pet-item col media py-3" *ngFor="let data of dataList">
+    <div class="mr-3">
+      <button class="pet-delete btn btn-sm btn-danger"></button>
+    </div>
+    <!-- media-left -->
+
+    <div class="pet-info media-body">
+      <div class="pet-head d-flex">
+        <span class="pet-name" contenteditable="true">{{ data.petName }}</span>
+        <span class="apt-date ml-auto">{{data.aptDate}}</span>
+      </div>
+      <!-- pet-head -->
+
+      <div class="owner-name">
+        <span class="label-item">Owner: </span>
+        <span contenteditable="true">{{ data.ownerName }}</span>
+      </div>
+      <div class="apt-notes" contenteditable="true">{{ data.aptNotes }}</div>
+    </div>
+    <!-- pet-info -->
+  </div>
+  <!-- pet-item -->
+</div>
+<!-- appointment-list -->
