@@ -2,13 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'twi-search',
-  templateUrl: './search.component.html'
+  templateUrl: './search.component.html',
 })
 export class SearchComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

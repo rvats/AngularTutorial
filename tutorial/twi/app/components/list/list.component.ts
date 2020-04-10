@@ -2,13 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'twi-list',
-  templateUrl: './list.component.html'
+  templateUrl: './list.component.html',
 })
 export class ListComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
