@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import {without} from 'lodash';
 
 @Component({
   selector: 'twi-root',
@@ -15,5 +16,9 @@ export class TwiComponent implements OnInit {
     this.httpClient.get<object[]>('../assets/data.json').subscribe((data) => {
       this.dataList = data;
     });
+  }
+
+  deleteArticle(article: object){
+    this.dataList = without(this.dataList, article);
   }
 }

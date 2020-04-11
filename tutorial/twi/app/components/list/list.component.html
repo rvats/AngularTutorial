@@ -1,7 +1,8 @@
 <div class="articles-list item-list mb-3">
   <div class="article-item col media py-3" *ngFor="let data of dataList">
     <div class="mr-3">
-      <button class="article-delete btn btn-sm btn-danger">
+      <button class="article-delete btn btn-sm btn-danger"
+        (click)="deleteRecord(data)">
         <fa-icon [icon]="faTimesCircle"></fa-icon>
       </button>
     </div>
