@@ -1,25 +1,27 @@
-<div class="appointment-list item-list mb-3">
+<div class="articles-list item-list mb-3">
   <div class="pet-item col media py-3" *ngFor="let data of dataList">
     <div class="mr-3">
-      <button class="pet-delete btn btn-sm btn-danger"></button>
+      <button class="pet-delete btn btn-sm btn-danger">
+        <fa-icon [icon]="faTimesCircle"></fa-icon>
+      </button>
     </div>
     <!-- media-left -->
 
     <div class="pet-info media-body">
       <div class="pet-head d-flex">
-        <span class="pet-name" contenteditable="true">{{ data.petName }}</span>
-        <span class="apt-date ml-auto">{{data.aptDate}}</span>
+        <span class="article-name" contenteditable="true">{{ data.articleName }}</span>
+        <span class="apt-date ml-auto">{{data.articleDate}}</span>
       </div>
       <!-- pet-head -->
 
       <div class="owner-name">
-        <span class="label-item">Owner: </span>
-        <span contenteditable="true">{{ data.ownerName }}</span>
+        <span class="label-item">Link: </span>
+        <span contenteditable="true">{{ data.articleUrl }}</span>
       </div>
-      <div class="apt-notes" contenteditable="true">{{ data.aptNotes }}</div>
+      <div class="apt-notes" contenteditable="true">{{ data.articleAuthor }}</div>
     </div>
     <!-- pet-info -->
   </div>
   <!-- pet-item -->
 </div>
-<!-- appointment-list -->
+<!-- articles-list -->
