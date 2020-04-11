@@ -21,11 +21,11 @@ footer {
   border: inherit;
 }
 
-.add-appointment .card-body {
+.add-article .card-body {
   display: none;
 }
 
-.apt-addheading {
+.article-addheading {
   cursor: pointer;
   user-select: none;
 }
@@ -54,11 +54,11 @@ footer {
   color: #667b82;
 }
 
-.articles-list .apt-date {
+.articles-list .article-date {
   font-style: italic;
 }
 
-.articles-list .apt-notes {
+.articles-list .article-notes {
   line-height: 120%;
 }
 
