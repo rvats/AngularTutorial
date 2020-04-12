@@ -3,10 +3,9 @@
     <div class="row">
       <div class="col-md-12 bg-white">
         <div class="container">
-          <h2 class="py-5">{{ title }}</h2>
           <twi-add (addArticleEvent)="addArticle($event)"></twi-add>
           <twi-search (queryArticlesEvent)="queryArticles($event)"></twi-search>
-          <twi-list [dataList]="dataList" (deleteArticleEvent)="deleteArticle($event)"></twi-list>
+          <twi-list [dataList]="modifiedDataList" (deleteArticleEvent)="deleteArticle($event)"></twi-list>
         </div>
       </div>
       <!-- col-md-12 -->

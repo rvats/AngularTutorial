@@ -6,39 +6,33 @@
     "articleDate": "2020-04-01"
   },
   {
+    "articleName": "Top 10 Angular Best Practices to Adapt in 2020",
+    "articleAuthor": "SAURABH BAROT",
+    "articleUrl": "https://aglowiditsolutions.com/blog/angular-best-practices/",
+    "articleDate": "2020-02-28"
+  },
+  {
+    "articleName": "Cheat Sheet - Angular",
+    "articleAuthor": "Angular Team",
+    "articleUrl": "https://angular.io/guide/cheatsheet",
+    "articleDate": "2020-02-28"
+  },
+  {
+    "articleName": "Malcoded Angular Cheat Sheet",
+    "articleAuthor": "Team Malcoded",
+    "articleUrl": "https://malcoded.com/angular-cheat-sheet/",
+    "articleDate": "2020-02-28"
+  },
+  {
+    "articleName": "Angular 4 Development Cheat Sheet",
+    "articleAuthor": "V Keerti Kotaru",
+    "articleUrl": "https://www.dotnetcurry.com/angular/1385/angular-4-cheat-sheet",
+    "articleDate": "2017-08-30"
+  },
+  {
     "articleName": "Best practices for a clean and performant Angular application",
     "articleAuthor": " Vamsi Vempati",
     "articleUrl": "https://www.freecodecamp.org/news/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f/",
     "articleDate": "2018-10-03"
   },
-  {
-    "articleName": "Top 10 Angular Best Practices to Adapt in 2020",
-    "articleAuthor": "SAURABH BAROT",
-    "articleUrl": "https://aglowiditsolutions.com/blog/angular-best-practices/",
-    "articleDate": "2020-02-28"
-  },
-  {
-    "articleName": "Top 10 Angular Best Practices to Adapt in 2020",
-    "articleAuthor": "SAURABH BAROT",
-    "articleUrl": "https://aglowiditsolutions.com/blog/angular-best-practices/",
-    "articleDate": "2020-02-28"
-  },
-  {
-    "articleName": "Top 10 Angular Best Practices to Adapt in 2020",
-    "articleAuthor": "SAURABH BAROT",
-    "articleUrl": "https://aglowiditsolutions.com/blog/angular-best-practices/",
-    "articleDate": "2020-02-28"
-  },
-  {
-    "articleName": "Top 10 Angular Best Practices to Adapt in 2020",
-    "articleAuthor": "SAURABH BAROT",
-    "articleUrl": "https://aglowiditsolutions.com/blog/angular-best-practices/",
-    "articleDate": "2020-02-28"
-  },
-  {
-    "articleName": "Top 10 Angular Best Practices to Adapt in 2020",
-    "articleAuthor": "SAURABH BAROT",
-    "articleUrl": "https://aglowiditsolutions.com/blog/angular-best-practices/",
-    "articleDate": "2020-02-28"
-  }
 ]
