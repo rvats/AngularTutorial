@@ -21,13 +21,61 @@
         >
           Sort by: <span class="caret"></span>
         </button>
-        <div ngbDropdownMenu class="sort-menu dropdown-menu dropdown-menu-right">
-          <a class="sort-by dropdown-item" href="#" ngbDropdownItem [ngClass]="{'active': orderBy === 'articleName'}">Article Name</a>
-          <a class="sort-by dropdown-item" href="#" ngbDropdownItem [ngClass]="{'active': orderBy === 'articleDate'}">Date</a>
-          <a class="sort-by dropdown-item" href="#" ngbDropdownItem [ngClass]="{'active': orderBy === 'articleAuthor'}">Author</a>
+        <div
+          ngbDropdownMenu
+          class="sort-menu dropdown-menu dropdown-menu-right"
+        >
+          <a
+            class="sort-by dropdown-item"
+            href="#"
+            ngbDropdownItem
+            [ngClass]="{ active: orderBy === 'articleName' }"
+            (click)="
+              handleSort({ orderBy: 'articleName', orderType: orderType })
+            "
+            >Article Name</a
+          >
+          <a
+            class="sort-by dropdown-item"
+            href="#"
+            ngbDropdownItem
+            [ngClass]="{ active: orderBy === 'articleDate' }"
+            (click)="
+              handleSort({ orderBy: 'articleDate', orderType: orderType })
+            "
+            >Date</a
+          >
+          <a
+            class="sort-by dropdown-item"
+            href="#"
+            ngbDropdownItem
+            [ngClass]="{ active: orderBy === 'articleAuthor' }"
+            (click)="
+              handleSort({ orderBy: 'articleAuthor', orderType: orderType })
+            "
+            >Author</a
+          >
           <div role="separator" class="dropdown-divider"></div>
-          <a class="sort-dir dropdown-item" href="#" ngbDropdownItem [ngClass]="{'active': orderType === 'asc'}">Asc</a>
-          <a class="sort-dir dropdown-item" href="#" ngbDropdownItem [ngClass]="{'active': orderType === 'desc'}">Desc</a>
+          <a
+            class="sort-dir dropdown-item"
+            href="#"
+            ngbDropdownItem
+            [ngClass]="{ active: orderType === 'asc' }"
+            (click)="
+              handleSort({ orderBy: orderType, orderType: 'asc' })
+            "
+            >Asc</a
+          >
+          <a
+            class="sort-dir dropdown-item"
+            href="#"
+            ngbDropdownItem
+            [ngClass]="{ active: orderType === 'desc' }"
+            (click)="
+              handleSort({ orderBy: orderType, orderType: 'asc' })
+            "
+            >Desc</a
+          >
         </div>
       </div>
       <!-- input-group-btn -->

@@ -47,6 +47,11 @@ export class TwiComponent implements OnInit {
     });
   }
 
+  orderArticles(orderObject) {
+    this.orderBy = orderObject.orderBy;
+    this.orderType = orderObject.orderType;
+  }
+
   sortArticles() {
     let order: number;
     if (this.orderType === 'asc') {

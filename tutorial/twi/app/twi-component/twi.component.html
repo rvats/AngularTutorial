@@ -4,8 +4,16 @@
       <div class="col-md-12 bg-white">
         <div class="container">
           <twi-add (addArticleEvent)="addArticle($event)"></twi-add>
-          <twi-search [orderBy]="orderBy" [orderType]="orderType" (queryArticlesEvent)="queryArticles($event)"></twi-search>
-          <twi-list [dataList]="modifiedDataList" (deleteArticleEvent)="deleteArticle($event)"></twi-list>
+          <twi-search
+            [orderBy]="orderBy"
+            [orderType]="orderType"
+            (queryArticlesEvent)="queryArticles($event)"
+            (orderArticlesEvent)="orderArticles($event)"
+          ></twi-search>
+          <twi-list
+            [dataList]="modifiedDataList"
+            (deleteArticleEvent)="deleteArticle($event)"
+          ></twi-list>
         </div>
       </div>
       <!-- col-md-12 -->
