@@ -25,4 +25,16 @@ export class TwiComponent implements OnInit {
   deleteArticle(article: object){
     this.dataList = without(this.dataList, article);
   }
+
+  queryArticles(query: string){
+    this.dataList = this.dataList.filter(
+      eachItem => {
+        return (
+          eachItem['articleName'].toLowerCase().includes(query.toLowerCase()) ||
+          eachItem['articleUrl'].toLowerCase().includes(query.toLowerCase()) ||
+          eachItem['articleAuthor'].toLowerCase().includes(query.toLowerCase())
+        )
+      }
+    );
+  }
 }
