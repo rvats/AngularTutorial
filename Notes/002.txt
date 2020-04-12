@@ -1,0 +1,37 @@
+These are the main reasons we believe that Angular and TypeScript are the right
+tools for developing web applications:
+? Clean separation of UI and app logic. There’s a clean separation between the code
+that renders the UI and the code that implements application logic. The UI
+doesn’t have to be rendered in HTML, and there are already products that support native UI rendering for iOS and Android.
+? Modularization. There’s a simple mechanism for modularizing applications with
+support for the lazy loading of modules.
+? Navigation. The router supports complex navigation scenarios in single-page
+applications.
+Licensed to Abraham French <abraham.french@gmail.com>
+xvi PREFACE
+? Loose coupling. Dependency injection gives you a clean way to implement loose
+coupling between components and services. Binding and events allow you to
+create reusable and loosely coupled components.
+? Component lifecycle. Each component goes through a well-defined lifecycle, and
+hooks for intercepting important component events are available for application developers.
+? Change detection. An automatic (and fast) change-detection mechanism spares
+you from the need to manually force UI updates while providing you a way to
+fine-tune this process.
+? No callback hell. Angular comes with the RxJS library, which allows you to
+arrange subscription-based processing of asynchronous data, eliminating callback hell.
+? Forms and validation. Support for forms and custom validation is well designed.
+You can create forms either by adding directives to form elements in the template or programmatically.
+? Testing. Unit and end-to-end testing are well supported, and you can integrate
+tests into your automated build process.
+? Tooling. Angular is well supported by IDEs. The TypeScript code analyzer warns
+you about errors as you type. Angular CLI quickly generates a new project and
+various artifacts (such as components and services), comes with a web server,
+and performs dev and prod builds, sparing developers from dealing with configuration scripts.
+? Concise code. Using TypeScript classes and interfaces makes your code concise
+and easy to read and write.
+? Compilers. The TypeScript code can be compiled into ES3, ES5, or the latest versions of JavaScript. Ahead-of-time compilation of app templates makes the initial app rendering faster and eliminates the need to package the Angular
+compiler with your app.
+? Server-side rendering. Angular Universal turns your app into HTML in an offline
+build step that can be used for server-side rendering, which in turn greatly
+improves indexing by search engines and SEO.
+? Modern-looking UI components. Angular Material offers more than 35 welldesigned UI components.

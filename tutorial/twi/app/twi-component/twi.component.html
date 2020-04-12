@@ -4,7 +4,7 @@
       <div class="col-md-12 bg-white">
         <div class="container">
           <twi-add (addArticleEvent)="addArticle($event)"></twi-add>
-          <twi-search (queryArticlesEvent)="queryArticles($event)"></twi-search>
+          <twi-search [orderBy]="orderBy" [orderType]="orderType" (queryArticlesEvent)="queryArticles($event)"></twi-search>
           <twi-list [dataList]="modifiedDataList" (deleteArticleEvent)="deleteArticle($event)"></twi-list>
         </div>
       </div>

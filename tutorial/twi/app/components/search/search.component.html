@@ -10,24 +10,24 @@
         [(ngModel)]="query"
         (keyup)="handleQuery()"
       />
-      <div class="input-group-append">
+      <div ngbDropdown class="input-group-append">
         <button
           type="button"
           class="btn btn-primary dropdown-toggle"
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"
+          ngbDropdownToggle
         >
           Sort by: <span class="caret"></span>
         </button>
-
-        <div class="sort-menu dropdown-menu dropdown-menu-right">
-          <a class="sort-by dropdown-item" href="#">Article Name</a>
-          <a class="sort-by dropdown-item" href="#">Date</a>
-          <a class="sort-by dropdown-item" href="#">Author</a>
+        <div ngbDropdownMenu class="sort-menu dropdown-menu dropdown-menu-right">
+          <a class="sort-by dropdown-item" href="#" ngbDropdownItem [ngClass]="{'active': orderBy === 'articleName'}">Article Name</a>
+          <a class="sort-by dropdown-item" href="#" ngbDropdownItem [ngClass]="{'active': orderBy === 'articleDate'}">Date</a>
+          <a class="sort-by dropdown-item" href="#" ngbDropdownItem [ngClass]="{'active': orderBy === 'articleAuthor'}">Author</a>
           <div role="separator" class="dropdown-divider"></div>
-          <a class="sort-dir dropdown-item" href="#">Asc</a>
-          <a class="sort-dir dropdown-item" href="#">Desc</a>
+          <a class="sort-dir dropdown-item" href="#" ngbDropdownItem [ngClass]="{'active': orderType === 'asc'}">Asc</a>
+          <a class="sort-dir dropdown-item" href="#" ngbDropdownItem [ngClass]="{'active': orderType === 'desc'}">Desc</a>
         </div>
       </div>
       <!-- input-group-btn -->

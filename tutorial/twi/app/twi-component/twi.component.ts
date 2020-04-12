@@ -28,11 +28,13 @@ export class TwiComponent implements OnInit {
   addArticle(article: object) {
     this.dataList.unshift(article);
     this.modifiedDataList.unshift(article);
+    this.sortArticles();
   }
 
   deleteArticle(article: object) {
     this.dataList = without(this.dataList, article);
     this.modifiedDataList = without(this.dataList, article);
+    this.sortArticles();
   }
 
   queryArticles(query: string) {

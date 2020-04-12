@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'twi-search',
@@ -6,6 +6,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
   query: string;
+  @Input() orderBy: string;
+  @Input() orderType: string;
   @Output() queryArticlesEvent = new EventEmitter();
 
   handleQuery(){
