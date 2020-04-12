@@ -1,52 +1,100 @@
-<div class="card textcenter mt-3" [ngClass]="{'add-article': showForm}">
-
-  <div class="article-addheading card-header bg-primary text-white"
-    (click)="toggleArticleFormDisplay()">
-     <fa-icon [icon]="faPlusCircle"></fa-icon> Add Article
-  </div><!-- card-header -->
+<div class="card textcenter mt-3" [ngClass]="{ 'add-article': hideForm }">
+  <div
+    class="article-addheading card-header bg-primary text-white"
+    (click)="toggleArticleFormDisplay()"
+  >
+    <fa-icon [icon]="faPlusCircle"></fa-icon> Add Article
+  </div>
+  <!-- card-header -->
 
   <div class="card-body">
-
-    <form id="articleForm" novalidate>
+    <form
+      id="articleForm"
+      (ngSubmit)="addArticle(articleForm.value)"
+      #articleForm="ngForm"
+    >
+      <div class="form-group form-row">
+        <label class="col-md-2 col-form-label text-md-right" for="articleName"
+          >Article Name</label
+        >
+        <div class="col-md-10">
+          <input
+            type="text"
+            class="form-control"
+            name="articleName"
+            id="articleName"
+            placeholder="Article's Name"
+            ngModel
+          />
+        </div>
+        <!-- col-md-10 -->
+      </div>
+      <!-- form-group -->
 
       <div class="form-group form-row">
-        <label class="col-md-2 col-form-label text-md-right" for="articleName">Article Name</label>
+        <label class="col-md-2 col-form-label text-md-right" for="articleLink"
+          >Article Url</label
+        >
         <div class="col-md-10">
-          <input type="text" class="form-control" name="articleName" id="articleName" placeholder="Article's Name">
-        </div><!-- col-md-10 -->
-      </div><!-- form-group -->
+          <input
+            type="text"
+            class="form-control"
+            name="articleUrl"
+            id="articleUrl"
+            placeholder="Article's Url"
+            ngModel
+          />
+        </div>
+        <!-- col-md-10 -->
+      </div>
+      <!-- form-group -->
 
       <div class="form-group form-row">
-        <label class="col-md-2 col-form-label text-md-right"
-          for="articleLink">Article Link</label>
+        <label class="col-md-2 col-form-label text-md-right" for="articleDate"
+          >Date Written</label
+        >
         <div class="col-md-10">
-          <input type="text" class="form-control" name="articleLink"
-            id="articleLink" placeholder="Article's Link">
-        </div><!-- col-md-10 -->
-      </div><!-- form-group -->
+          <input
+            type="date"
+            class="form-control"
+            id="articleDate"
+            name="articleDate"
+            ngModel
+          />
+        </div>
+        <!-- col-md-4 -->
+      </div>
+      <!-- form-group -->
 
       <div class="form-group form-row">
-        <label class="col-md-2 col-form-label text-md-right" for="articleDate">Date Written</label>
+        <label class="col-md-2 text-md-right" for="articleAuthor"
+          >Author of the Article</label
+        >
         <div class="col-md-10">
-          <input type="date" class="form-control" id="articleDate" name="articleDate">
-        </div><!-- col-md-4 -->
-      </div><!-- form-group -->
-
-      <div class="form-group form-row">
-        <label class="col-md-2 text-md-right" for="articleAuthor">Author of the Article</label>
-        <div class="col-md-10">
-          <textarea class="form-control" rows="4" cols="50"
-            name="articleAuthor" id="articleAuthor" placeholder="Author of the Article"></textarea>
-        </div><!-- col-md-10 -->
-      </div><!-- form-group -->
+          <input
+            type="text"
+            class="form-control"
+            name="articleAuthor"
+            id="articleAuthor"
+            placeholder="Author of the Article"
+            ngModel
+          />
+        </div>
+        <!-- col-md-10 -->
+      </div>
+      <!-- form-group -->
 
       <div class="form-group form-row mb-0">
         <div class="offset-md-2 col-md-10">
-          <button type="submit" class="btn btn-primary d-block ml-auto"
-          >Add Article</button>
-        </div><!-- col-md-offset-2 -->
-      </div><!-- form-group -->
-
+          <button type="submit" class="btn btn-primary d-block ml-auto">
+            Add Article
+          </button>
+        </div>
+        <!-- col-md-offset-2 -->
+      </div>
+      <!-- form-group -->
     </form>
-  </div><!-- card-body -->
-</div><!-- card-primary -->
+  </div>
+  <!-- card-body -->
+</div>
+<!-- card-primary -->

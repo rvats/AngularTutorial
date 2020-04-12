@@ -8,14 +8,13 @@ import {faTimes, faTimesCircle} from '@fortawesome/free-solid-svg-icons';
 export class ListComponent {
   @Input()
   dataList: object[];
-  @Output() deleteEvent = new EventEmitter();
+  @Output() deleteArticleEvent = new EventEmitter();
 
   faTimesCircle = faTimesCircle;
 
   constructor() {}
 
   deleteRecord(record: object){
-    console.log(record);
-    this.deleteEvent.emit(record);
+    this.deleteArticleEvent.emit(record);
   }
 }

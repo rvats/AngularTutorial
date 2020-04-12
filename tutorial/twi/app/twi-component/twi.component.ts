@@ -18,6 +18,10 @@ export class TwiComponent implements OnInit {
     });
   }
 
+  addArticle(article: object){
+    this.dataList.unshift(article);
+  }
+
   deleteArticle(article: object){
     this.dataList = without(this.dataList, article);
   }

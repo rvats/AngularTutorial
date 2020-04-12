@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,16 +6,29 @@ import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './add.component.html',
 })
 export class AddComponent implements OnInit {
-  showForm: boolean;
+  hideForm: boolean;
   faPlusCircle = faPlusCircle;
 
+  @Output() addArticleEvent = new EventEmitter();
+
   constructor() {
-    this.showForm = true;
+    this.hideForm = true;
+  }
+
+  addArticle(articleForm: any){
+    const articleObject: object = {
+      articleName: articleForm.articleName,
+      articleUrl: articleForm.articleUrl,
+      articleDate: articleForm.articleDate,
+      articleAuthor: articleForm.articleAuthor
+    };
+    this.addArticleEvent.emit(articleObject);
+    this.hideForm = !this.hideForm;
   }
 
   ngOnInit(): void {}
 
   toggleArticleFormDisplay() {
-    this.showForm = !this.showForm;
+    this.hideForm = !this.hideForm;
   }
 }

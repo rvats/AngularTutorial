@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 
 import { TwiComponent } from './twi-component/twi.component';
 import { AddComponent } from './components/add/add.component';
@@ -10,7 +11,7 @@ import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [TwiComponent, AddComponent, ListComponent, SearchComponent],
-  imports: [BrowserModule, HttpClientModule, FontAwesomeModule],
+  imports: [BrowserModule, HttpClientModule, FontAwesomeModule, FormsModule],
   providers: [],
   bootstrap: [TwiComponent],
 })
