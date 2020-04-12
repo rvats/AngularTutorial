@@ -1,8 +1,10 @@
 <div class="articles-list item-list mb-3">
   <div class="article-item col media py-3" *ngFor="let data of dataList">
     <div class="mr-3">
-      <button class="article-delete btn btn-sm btn-danger"
-        (click)="deleteRecord(data)">
+      <button
+        class="article-delete btn btn-sm btn-danger"
+        (click)="deleteRecord(data)"
+      >
         <fa-icon [icon]="faTimesCircle"></fa-icon>
       </button>
     </div>
@@ -10,16 +12,34 @@
 
     <div class="article-info media-body">
       <div class="article-head d-flex">
-        <span class="article-name" contenteditable="true">{{ data.articleName }}</span>
-        <span class="article-date ml-auto">{{data.articleDate}}</span>
+        <span
+          class="article-name"
+          contenteditable="true"
+          #articleName
+          (blur)="updateRecord(data, 'articleName', articleName.innerText)"
+          >{{ data.articleName }}</span
+        >
+        <span class="article-date ml-auto">{{ data.articleDate }}</span>
       </div>
       <!-- pet-head -->
 
       <div class="article-url">
         <span class="label-item">Link: </span>
-        <span contenteditable="true">{{ data.articleUrl }}</span>
+        <span
+          contenteditable="true"
+          #articleUrl
+          (blur)="updateRecord(data, 'articleUrl', articleUrl.innerText)"
+          >{{ data.articleUrl }}</span
+        >
       </div>
-      <div class="article-author-name" contenteditable="true">{{ data.articleAuthor }}</div>
+      <div
+        class="article-author-name"
+        contenteditable="true"
+        #articleAuthor
+        (blur)="updateRecord(data, 'articleAuthor', articleAuthor.innerText)"
+      >
+        {{ data.articleAuthor }}
+      </div>
     </div>
     <!-- pet-info -->
   </div>

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { without } from 'lodash';
+import { without, findIndex } from 'lodash';
 
 @Component({
   selector: 'twi-root',
@@ -11,6 +11,7 @@ export class TwiComponent implements OnInit {
   modifiedDataList: object[];
   orderBy: string;
   orderType: string;
+  lastIndex: number;
 
   constructor(private httpClient: HttpClient) {
     this.orderBy = 'articleName';
@@ -18,16 +19,22 @@ export class TwiComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.lastIndex = 1;
     this.httpClient.get<object[]>('../assets/data.json').subscribe((data) => {
-      this.dataList = data;
+      this.dataList = data.map((article: any) => {
+        article.Id = this.lastIndex++;
+        return article;
+      });
       this.modifiedDataList = data;
       this.sortArticles();
     });
   }
 
-  addArticle(article: object) {
+  addArticle(article: any) {
+    article.Id = this.lastIndex;
     this.dataList.unshift(article);
     this.modifiedDataList.unshift(article);
+    this.lastIndex++;
     this.sortArticles();
   }
 
@@ -35,6 +42,23 @@ export class TwiComponent implements OnInit {
     this.dataList = without(this.dataList, article);
     this.modifiedDataList = without(this.dataList, article);
     this.sortArticles();
+  }
+
+  updateArticle(modifiedArticle: any) {
+    let articleIndex: number;
+    let modifiedArticleIndex: number;
+
+    articleIndex = findIndex(this.dataList, {
+      articleId: modifiedArticle.article.Id,
+    });
+    modifiedArticleIndex = findIndex(this.modifiedDataList, {
+      articleId: modifiedArticle.article.Id,
+    });
+
+    this.dataList[articleIndex][modifiedArticle.labelName] =
+      modifiedArticle.newValue;
+    this.dataList[modifiedArticleIndex][modifiedArticle.labelName] =
+      modifiedArticle.newValue;
   }
 
   queryArticles(query: string) {
