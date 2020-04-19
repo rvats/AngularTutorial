@@ -1,0 +1,129 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "GettingStarted": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/GettingStarted",
+      "sourceRoot": "projects/GettingStarted/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/GettingStarted",
+            "index": "projects/GettingStarted/src/index.html",
+            "main": "projects/GettingStarted/src/main.ts",
+            "polyfills": "projects/GettingStarted/src/polyfills.ts",
+            "tsConfig": "projects/GettingStarted/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/GettingStarted/src/favicon.ico",
+              "projects/GettingStarted/src/assets"
+            ],
+            "styles": [
+              "projects/GettingStarted/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/GettingStarted/src/environments/environment.ts",
+                  "with": "projects/GettingStarted/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "GettingStarted:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "GettingStarted:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "GettingStarted:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/GettingStarted/src/test.ts",
+            "polyfills": "projects/GettingStarted/src/polyfills.ts",
+            "tsConfig": "projects/GettingStarted/tsconfig.spec.json",
+            "karmaConfig": "projects/GettingStarted/karma.conf.js",
+            "assets": [
+              "projects/GettingStarted/src/favicon.ico",
+              "projects/GettingStarted/src/assets"
+            ],
+            "styles": [
+              "projects/GettingStarted/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/GettingStarted/tsconfig.app.json",
+              "projects/GettingStarted/tsconfig.spec.json",
+              "projects/GettingStarted/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/GettingStarted/e2e/protractor.conf.js",
+            "devServerTarget": "GettingStarted:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "GettingStarted:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "GettingStarted"
+}
