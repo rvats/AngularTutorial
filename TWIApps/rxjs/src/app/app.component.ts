@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 
 
 @Component({
@@ -10,36 +10,25 @@ import { Observable } from 'rxjs';
 
 export class AppComponent implements OnInit, OnDestroy {
   title = 'rxjs';
-  observable$;
+  subject$;
 
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.observable$ = Observable.create(
-      (observer)=>{
-        observer.next(1);
-        observer.next(2);
-        observer.next(3);
-        observer.complete();
-      },
-      (observer2)=> {
-        observer2.next(4);
-        observer2.next(5);
-        observer2.next(6);
-        observer2.complete();
-      }
-    );
-    this.observable$.subscribe(
-      value => console.log(value),
-      err => console.error('Something went wrong'),
-      () => console.log('this is the end.')
-    );
+    this.subject$ = new Subject();
+    this.subject$.subscribe(x => console.log('First Subscriber ', x));
+    this.subject$.next(1);
+    this.subject$.next(2);
+    this.subject$.next(3);
+    // To complete and kill any further subscription use unsubscribe and not complete.
+    this.subject$.subscribe(x=> console.log('Second Subscriber ', x));
+    this.subject$.next(4);
   }
 
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
-    this.observable$.unsubscribe();
-    // Above line will clean up any memory leaks issue due to observables
+    this.subject$.unsubscribe();
+    // Above line will clean up any memory leaks issue due to subjects
   }
 }
