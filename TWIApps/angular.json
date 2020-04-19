@@ -254,25 +254,25 @@
           "style": "scss"
         }
       },
-      "root": "Covid19",
-      "sourceRoot": "Covid19/src",
+      "root": "rxjs",
+      "sourceRoot": "rxjs/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Covid19",
-            "index": "Covid19/src/index.html",
-            "main": "Covid19/src/main.ts",
-            "polyfills": "Covid19/src/polyfills.ts",
-            "tsConfig": "Covid19/tsconfig.app.json",
+            "outputPath": "dist/rxjs",
+            "index": "rxjs/src/index.html",
+            "main": "rxjs/src/main.ts",
+            "polyfills": "rxjs/src/polyfills.ts",
+            "tsConfig": "rxjs/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "Covid19/src/favicon.ico",
-              "Covid19/src/assets"
+              "rxjs/src/favicon.ico",
+              "rxjs/src/assets"
             ],
             "styles": [
-              "Covid19/src/styles.scss"
+              "rxjs/src/styles.scss"
             ],
             "scripts": []
           },
@@ -280,8 +280,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "Covid19/src/environments/environment.ts",
-                  "with": "Covid19/src/environments/environment.prod.ts"
+                  "replace": "rxjs/src/environments/environment.ts",
+                  "with": "rxjs/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -311,33 +311,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Covid19:build"
+            "browserTarget": "rxjs:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Covid19:build:production"
+              "browserTarget": "rxjs:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Covid19:build"
+            "browserTarget": "rxjs:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "Covid19/src/test.ts",
-            "polyfills": "Covid19/src/polyfills.ts",
-            "tsConfig": "Covid19/tsconfig.spec.json",
-            "karmaConfig": "Covid19/karma.conf.js",
+            "main": "rxjs/src/test.ts",
+            "polyfills": "rxjs/src/polyfills.ts",
+            "tsConfig": "rxjs/tsconfig.spec.json",
+            "karmaConfig": "rxjs/karma.conf.js",
             "assets": [
-              "Covid19/src/favicon.ico",
-              "Covid19/src/assets"
+              "rxjs/src/favicon.ico",
+              "rxjs/src/assets"
             ],
             "styles": [
-              "Covid19/src/styles.scss"
+              "rxjs/src/styles.scss"
             ],
             "scripts": []
           }
@@ -346,9 +346,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "Covid19/tsconfig.app.json",
-              "Covid19/tsconfig.spec.json",
-              "Covid19/e2e/tsconfig.json"
+              "rxjs/tsconfig.app.json",
+              "rxjs/tsconfig.spec.json",
+              "rxjs/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -358,12 +358,12 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "Covid19/e2e/protractor.conf.js",
-            "devServerTarget": "Covid19:serve"
+            "protractorConfig": "rxjs/e2e/protractor.conf.js",
+            "devServerTarget": "rxjs:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Covid19:serve:production"
+              "devServerTarget": "rxjs:serve:production"
             }
           }
         }
@@ -376,25 +376,25 @@
           "style": "scss"
         }
       },
-      "root": "Covid19",
-      "sourceRoot": "Covid19/src",
+      "root": "tutorial",
+      "sourceRoot": "tutorial/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Covid19",
-            "index": "Covid19/src/index.html",
-            "main": "Covid19/src/main.ts",
-            "polyfills": "Covid19/src/polyfills.ts",
-            "tsConfig": "Covid19/tsconfig.app.json",
+            "outputPath": "dist/tutorial",
+            "index": "tutorial/src/index.html",
+            "main": "tutorial/src/main.ts",
+            "polyfills": "tutorial/src/polyfills.ts",
+            "tsConfig": "tutorial/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "Covid19/src/favicon.ico",
-              "Covid19/src/assets"
+              "tutorial/src/favicon.ico",
+              "tutorial/src/assets"
             ],
             "styles": [
-              "Covid19/src/styles.scss"
+              "tutorial/src/styles.scss"
             ],
             "scripts": []
           },
@@ -402,8 +402,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "Covid19/src/environments/environment.ts",
-                  "with": "Covid19/src/environments/environment.prod.ts"
+                  "replace": "tutorial/src/environments/environment.ts",
+                  "with": "tutorial/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -433,33 +433,33 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Covid19:build"
+            "browserTarget": "tutorial:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Covid19:build:production"
+              "browserTarget": "tutorial:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Covid19:build"
+            "browserTarget": "tutorial:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "Covid19/src/test.ts",
-            "polyfills": "Covid19/src/polyfills.ts",
-            "tsConfig": "Covid19/tsconfig.spec.json",
-            "karmaConfig": "Covid19/karma.conf.js",
+            "main": "tutorial/src/test.ts",
+            "polyfills": "tutorial/src/polyfills.ts",
+            "tsConfig": "tutorial/tsconfig.spec.json",
+            "karmaConfig": "tutorial/karma.conf.js",
             "assets": [
-              "Covid19/src/favicon.ico",
-              "Covid19/src/assets"
+              "tutorial/src/favicon.ico",
+              "tutorial/src/assets"
             ],
             "styles": [
-              "Covid19/src/styles.scss"
+              "tutorial/src/styles.scss"
             ],
             "scripts": []
           }
@@ -468,9 +468,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "Covid19/tsconfig.app.json",
-              "Covid19/tsconfig.spec.json",
-              "Covid19/e2e/tsconfig.json"
+              "tutorial/tsconfig.app.json",
+              "tutorial/tsconfig.spec.json",
+              "tutorial/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -480,12 +480,12 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "Covid19/e2e/protractor.conf.js",
-            "devServerTarget": "Covid19:serve"
+            "protractorConfig": "tutorial/e2e/protractor.conf.js",
+            "devServerTarget": "tutorial:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Covid19:serve:production"
+              "devServerTarget": "tutorial:serve:production"
             }
           }
         }
