@@ -15,12 +15,20 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.observable$ = Observable.create((observer)=>{
-      observer.next(1);
-      observer.next(2);
-      observer.next(3);
-      observer.complete();
-    });
+    this.observable$ = Observable.create(
+      (observer)=>{
+        observer.next(1);
+        observer.next(2);
+        observer.next(3);
+        observer.complete();
+      },
+      (observer2)=> {
+        observer2.next(4);
+        observer2.next(5);
+        observer2.next(6);
+        observer2.complete();
+      }
+    );
     this.observable$.subscribe(
       value => console.log(value),
       err => console.error('Something went wrong'),
