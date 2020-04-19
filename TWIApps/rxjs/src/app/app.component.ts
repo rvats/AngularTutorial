@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 
 @Component({
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.subject$ = new Subject();
+    this.subject$ = new BehaviorSubject(200);
     this.subject$.subscribe(x => console.log('First Subscriber ', x));
     this.subject$.next(1);
     this.subject$.next(2);
