@@ -10,25 +10,25 @@
           "style": "scss"
         }
       },
-      "root": "projects/GettingStarted",
-      "sourceRoot": "projects/GettingStarted/src",
+      "root": "GettingStarted",
+      "sourceRoot": "GettingStarted/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/GettingStarted",
-            "index": "projects/GettingStarted/src/index.html",
-            "main": "projects/GettingStarted/src/main.ts",
-            "polyfills": "projects/GettingStarted/src/polyfills.ts",
-            "tsConfig": "projects/GettingStarted/tsconfig.app.json",
+            "index": "GettingStarted/src/index.html",
+            "main": "GettingStarted/src/main.ts",
+            "polyfills": "GettingStarted/src/polyfills.ts",
+            "tsConfig": "GettingStarted/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "projects/GettingStarted/src/favicon.ico",
-              "projects/GettingStarted/src/assets"
+              "GettingStarted/src/favicon.ico",
+              "GettingStarted/src/assets"
             ],
             "styles": [
-              "projects/GettingStarted/src/styles.scss"
+              "GettingStarted/src/styles.scss"
             ],
             "scripts": []
           },
@@ -36,8 +36,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/GettingStarted/src/environments/environment.ts",
-                  "with": "projects/GettingStarted/src/environments/environment.prod.ts"
+                  "replace": "GettingStarted/src/environments/environment.ts",
+                  "with": "GettingStarted/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -84,16 +84,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/GettingStarted/src/test.ts",
-            "polyfills": "projects/GettingStarted/src/polyfills.ts",
-            "tsConfig": "projects/GettingStarted/tsconfig.spec.json",
-            "karmaConfig": "projects/GettingStarted/karma.conf.js",
+            "main": "GettingStarted/src/test.ts",
+            "polyfills": "GettingStarted/src/polyfills.ts",
+            "tsConfig": "GettingStarted/tsconfig.spec.json",
+            "karmaConfig": "GettingStarted/karma.conf.js",
             "assets": [
-              "projects/GettingStarted/src/favicon.ico",
-              "projects/GettingStarted/src/assets"
+              "GettingStarted/src/favicon.ico",
+              "GettingStarted/src/assets"
             ],
             "styles": [
-              "projects/GettingStarted/src/styles.scss"
+              "GettingStarted/src/styles.scss"
             ],
             "scripts": []
           }
@@ -102,9 +102,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/GettingStarted/tsconfig.app.json",
-              "projects/GettingStarted/tsconfig.spec.json",
-              "projects/GettingStarted/e2e/tsconfig.json"
+              "GettingStarted/tsconfig.app.json",
+              "GettingStarted/tsconfig.spec.json",
+              "GettingStarted/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -114,7 +114,7 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/GettingStarted/e2e/protractor.conf.js",
+            "protractorConfig": "GettingStarted/e2e/protractor.conf.js",
             "devServerTarget": "GettingStarted:serve"
           },
           "configurations": {
@@ -132,25 +132,25 @@
           "style": "scss"
         }
       },
-      "root": "projects/Covid19",
-      "sourceRoot": "projects/Covid19/src",
+      "root": "Covid19",
+      "sourceRoot": "Covid19/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/Covid19",
-            "index": "projects/Covid19/src/index.html",
-            "main": "projects/Covid19/src/main.ts",
-            "polyfills": "projects/Covid19/src/polyfills.ts",
-            "tsConfig": "projects/Covid19/tsconfig.app.json",
+            "index": "Covid19/src/index.html",
+            "main": "Covid19/src/main.ts",
+            "polyfills": "Covid19/src/polyfills.ts",
+            "tsConfig": "Covid19/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "projects/Covid19/src/favicon.ico",
-              "projects/Covid19/src/assets"
+              "Covid19/src/favicon.ico",
+              "Covid19/src/assets"
             ],
             "styles": [
-              "projects/Covid19/src/styles.scss"
+              "Covid19/src/styles.scss"
             ],
             "scripts": []
           },
@@ -158,8 +158,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/Covid19/src/environments/environment.ts",
-                  "with": "projects/Covid19/src/environments/environment.prod.ts"
+                  "replace": "Covid19/src/environments/environment.ts",
+                  "with": "Covid19/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -206,16 +206,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/Covid19/src/test.ts",
-            "polyfills": "projects/Covid19/src/polyfills.ts",
-            "tsConfig": "projects/Covid19/tsconfig.spec.json",
-            "karmaConfig": "projects/Covid19/karma.conf.js",
+            "main": "Covid19/src/test.ts",
+            "polyfills": "Covid19/src/polyfills.ts",
+            "tsConfig": "Covid19/tsconfig.spec.json",
+            "karmaConfig": "Covid19/karma.conf.js",
             "assets": [
-              "projects/Covid19/src/favicon.ico",
-              "projects/Covid19/src/assets"
+              "Covid19/src/favicon.ico",
+              "Covid19/src/assets"
             ],
             "styles": [
-              "projects/Covid19/src/styles.scss"
+              "Covid19/src/styles.scss"
             ],
             "scripts": []
           }
@@ -224,9 +224,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/Covid19/tsconfig.app.json",
-              "projects/Covid19/tsconfig.spec.json",
-              "projects/Covid19/e2e/tsconfig.json"
+              "Covid19/tsconfig.app.json",
+              "Covid19/tsconfig.spec.json",
+              "Covid19/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -236,7 +236,7 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/Covid19/e2e/protractor.conf.js",
+            "protractorConfig": "Covid19/e2e/protractor.conf.js",
             "devServerTarget": "Covid19:serve"
           },
           "configurations": {
@@ -254,25 +254,25 @@
           "style": "scss"
         }
       },
-      "root": "projects/Covid19",
-      "sourceRoot": "projects/Covid19/src",
+      "root": "Covid19",
+      "sourceRoot": "Covid19/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/Covid19",
-            "index": "projects/Covid19/src/index.html",
-            "main": "projects/Covid19/src/main.ts",
-            "polyfills": "projects/Covid19/src/polyfills.ts",
-            "tsConfig": "projects/Covid19/tsconfig.app.json",
+            "index": "Covid19/src/index.html",
+            "main": "Covid19/src/main.ts",
+            "polyfills": "Covid19/src/polyfills.ts",
+            "tsConfig": "Covid19/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "projects/Covid19/src/favicon.ico",
-              "projects/Covid19/src/assets"
+              "Covid19/src/favicon.ico",
+              "Covid19/src/assets"
             ],
             "styles": [
-              "projects/Covid19/src/styles.scss"
+              "Covid19/src/styles.scss"
             ],
             "scripts": []
           },
@@ -280,8 +280,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/Covid19/src/environments/environment.ts",
-                  "with": "projects/Covid19/src/environments/environment.prod.ts"
+                  "replace": "Covid19/src/environments/environment.ts",
+                  "with": "Covid19/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -328,16 +328,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/Covid19/src/test.ts",
-            "polyfills": "projects/Covid19/src/polyfills.ts",
-            "tsConfig": "projects/Covid19/tsconfig.spec.json",
-            "karmaConfig": "projects/Covid19/karma.conf.js",
+            "main": "Covid19/src/test.ts",
+            "polyfills": "Covid19/src/polyfills.ts",
+            "tsConfig": "Covid19/tsconfig.spec.json",
+            "karmaConfig": "Covid19/karma.conf.js",
             "assets": [
-              "projects/Covid19/src/favicon.ico",
-              "projects/Covid19/src/assets"
+              "Covid19/src/favicon.ico",
+              "Covid19/src/assets"
             ],
             "styles": [
-              "projects/Covid19/src/styles.scss"
+              "Covid19/src/styles.scss"
             ],
             "scripts": []
           }
@@ -346,9 +346,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/Covid19/tsconfig.app.json",
-              "projects/Covid19/tsconfig.spec.json",
-              "projects/Covid19/e2e/tsconfig.json"
+              "Covid19/tsconfig.app.json",
+              "Covid19/tsconfig.spec.json",
+              "Covid19/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -358,7 +358,7 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/Covid19/e2e/protractor.conf.js",
+            "protractorConfig": "Covid19/e2e/protractor.conf.js",
             "devServerTarget": "Covid19:serve"
           },
           "configurations": {
@@ -376,25 +376,25 @@
           "style": "scss"
         }
       },
-      "root": "projects/Covid19",
-      "sourceRoot": "projects/Covid19/src",
+      "root": "Covid19",
+      "sourceRoot": "Covid19/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/Covid19",
-            "index": "projects/Covid19/src/index.html",
-            "main": "projects/Covid19/src/main.ts",
-            "polyfills": "projects/Covid19/src/polyfills.ts",
-            "tsConfig": "projects/Covid19/tsconfig.app.json",
+            "index": "Covid19/src/index.html",
+            "main": "Covid19/src/main.ts",
+            "polyfills": "Covid19/src/polyfills.ts",
+            "tsConfig": "Covid19/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "projects/Covid19/src/favicon.ico",
-              "projects/Covid19/src/assets"
+              "Covid19/src/favicon.ico",
+              "Covid19/src/assets"
             ],
             "styles": [
-              "projects/Covid19/src/styles.scss"
+              "Covid19/src/styles.scss"
             ],
             "scripts": []
           },
@@ -402,8 +402,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/Covid19/src/environments/environment.ts",
-                  "with": "projects/Covid19/src/environments/environment.prod.ts"
+                  "replace": "Covid19/src/environments/environment.ts",
+                  "with": "Covid19/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -450,16 +450,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/Covid19/src/test.ts",
-            "polyfills": "projects/Covid19/src/polyfills.ts",
-            "tsConfig": "projects/Covid19/tsconfig.spec.json",
-            "karmaConfig": "projects/Covid19/karma.conf.js",
+            "main": "Covid19/src/test.ts",
+            "polyfills": "Covid19/src/polyfills.ts",
+            "tsConfig": "Covid19/tsconfig.spec.json",
+            "karmaConfig": "Covid19/karma.conf.js",
             "assets": [
-              "projects/Covid19/src/favicon.ico",
-              "projects/Covid19/src/assets"
+              "Covid19/src/favicon.ico",
+              "Covid19/src/assets"
             ],
             "styles": [
-              "projects/Covid19/src/styles.scss"
+              "Covid19/src/styles.scss"
             ],
             "scripts": []
           }
@@ -468,9 +468,9 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/Covid19/tsconfig.app.json",
-              "projects/Covid19/tsconfig.spec.json",
-              "projects/Covid19/e2e/tsconfig.json"
+              "Covid19/tsconfig.app.json",
+              "Covid19/tsconfig.spec.json",
+              "Covid19/e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -480,7 +480,7 @@
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/Covid19/e2e/protractor.conf.js",
+            "protractorConfig": "Covid19/e2e/protractor.conf.js",
             "devServerTarget": "Covid19:serve"
           },
           "configurations": {
