@@ -493,11 +493,7 @@
     },
     "TWIUniversalWeb": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
+      "schematics": {},
       "root": "TWIUniversalWeb",
       "sourceRoot": "TWIUniversalWeb/src",
       "prefix": "app",
@@ -505,7 +501,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/TWIUniversalWeb",
+            "outputPath": "dist/browser",
             "index": "TWIUniversalWeb/src/index.html",
             "main": "TWIUniversalWeb/src/main.ts",
             "polyfills": "TWIUniversalWeb/src/polyfills.ts",
@@ -513,10 +509,11 @@
             "aot": false,
             "assets": [
               "TWIUniversalWeb/src/favicon.ico",
-              "TWIUniversalWeb/src/assets"
+              "TWIUniversalWeb/src/assets",
+              "TWIUniversalWeb/src/manifest.webmanifest"
             ],
             "styles": [
-              "TWIUniversalWeb/src/styles.scss"
+              "TWIUniversalWeb/src/styles.css"
             ],
             "scripts": []
           },
@@ -548,7 +545,9 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "TWIUniversalWeb/ngsw-config.json"
             }
           }
         },
@@ -578,10 +577,11 @@
             "karmaConfig": "TWIUniversalWeb/karma.conf.js",
             "assets": [
               "TWIUniversalWeb/src/favicon.ico",
-              "TWIUniversalWeb/src/assets"
+              "TWIUniversalWeb/src/assets",
+              "TWIUniversalWeb/src/manifest.webmanifest"
             ],
             "styles": [
-              "TWIUniversalWeb/src/styles.scss"
+              "TWIUniversalWeb/src/styles.css"
             ],
             "scripts": []
           }
@@ -610,9 +610,31 @@
               "devServerTarget": "TWIUniversalWeb:serve:production"
             }
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/server",
+            "main": "TWIUniversalWeb/src/main.server.ts",
+            "tsConfig": "TWIUniversalWeb/tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "TWIUniversalWeb/src/environments/environment.ts",
+                  "with": "TWIUniversalWeb/src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": {
+                "scripts": false,
+                "styles": true
+              }
+            }
+          }
         }
       }
-    }
-  },
-  "defaultProject": "GettingStarted"
+    },
+  "defaultProject": "TWIUniversalWeb"
 }
