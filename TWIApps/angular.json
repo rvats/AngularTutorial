@@ -513,7 +513,7 @@
               "TWIUniversalWeb/src/manifest.webmanifest"
             ],
             "styles": [
-              "TWIUniversalWeb/src/styles.css"
+              "TWIUniversalWeb/src/styles.scss"
             ],
             "scripts": []
           },
@@ -581,7 +581,7 @@
               "TWIUniversalWeb/src/manifest.webmanifest"
             ],
             "styles": [
-              "TWIUniversalWeb/src/styles.css"
+              "TWIUniversalWeb/src/styles.scss"
             ],
             "scripts": []
           }
@@ -635,6 +635,10 @@
           }
         }
       }
-    },
+    }
+  },
+  "cli": {
+    "analytics": false
+  },
   "defaultProject": "TWIUniversalWeb"
 }
