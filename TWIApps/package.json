@@ -7,7 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+	"dev:ssr": "ng run TWIUniversalWeb:serve-ssr",
+    "build:ssr": "ng build --prod && ng run TWIUniversalWeb:server:production",
+    "serve:ssr": "node dist/server/main.js",
+    "prerender": "ng run TWIUniversalWeb:prerender"
   },
   "private": true,
   "dependencies": {
