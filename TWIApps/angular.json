@@ -34,12 +34,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "GettingStarted/src/environments/environment.ts",
-                  "with": "GettingStarted/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "GettingStarted/src/environments/environment.ts",
+                "with": "GettingStarted/src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -49,8 +47,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
+              "budgets": [{
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
@@ -156,12 +153,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "Covid19/src/environments/environment.ts",
-                  "with": "Covid19/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "Covid19/src/environments/environment.ts",
+                "with": "Covid19/src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -171,8 +166,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
+              "budgets": [{
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
@@ -278,12 +272,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "rxjs/src/environments/environment.ts",
-                  "with": "rxjs/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "rxjs/src/environments/environment.ts",
+                "with": "rxjs/src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -293,8 +285,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
+              "budgets": [{
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
@@ -400,12 +391,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "tutorial/src/environments/environment.ts",
-                  "with": "tutorial/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "tutorial/src/environments/environment.ts",
+                "with": "tutorial/src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -415,8 +404,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
+              "budgets": [{
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
@@ -520,12 +508,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "TWIUniversalWeb/src/environments/environment.ts",
-                  "with": "TWIUniversalWeb/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "TWIUniversalWeb/src/environments/environment.ts",
+                "with": "TWIUniversalWeb/src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -535,8 +521,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "budgets": [
-                {
+              "budgets": [{
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
@@ -622,25 +607,47 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "TWIUniversalWeb/src/environments/environment.ts",
-                  "with": "TWIUniversalWeb/src/environments/environment.prod.ts"
-                }
-              ],
+              "outputHashing": "media",
+              "fileReplacements": [{
+                "replace": "TWIUniversalWeb/src/environments/environment.ts",
+                "with": "TWIUniversalWeb/src/environments/environment.prod.ts"
+              }],
               "sourceMap": false,
-              "optimization": {
-                "scripts": false,
-                "styles": true
-              }
+              "optimization": true
             }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "TWIUniversalWeb:build",
+            "serverTarget": "TWIUniversalWeb:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "TWIUniversalWeb:build:production",
+              "serverTarget": "TWIUniversalWeb:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "TWIUniversalWeb:build:production",
+            "serverTarget": "TWIUniversalWeb:server:production",
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": true
   },
   "defaultProject": "TWIUniversalWeb"
 }
